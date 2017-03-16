@@ -102,6 +102,7 @@
           <button type="button" class="a-button u-is-primary u-is-small" (click)="today()">Today</button>
         </div>
       </div>
+      {{isMobile()}}
       <div *ngIf="yearPicker && !isMobile()">
         <div class="datepicker-calendar-years-container" slimScroll [options]="scrollOptions">
           <span class="year" *ngFor="let y of years; let i = index" (click)="selectYear($event, y)">
