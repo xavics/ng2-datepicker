@@ -218,6 +218,7 @@ export var DatePickerComponent = (function () {
     };
     DatePickerComponent.prototype.selectYear = function (e, year) {
         var _this = this;
+        debugger;
         e.preventDefault();
         setTimeout(function () {
             var date = _this.currentDate.year(year);
