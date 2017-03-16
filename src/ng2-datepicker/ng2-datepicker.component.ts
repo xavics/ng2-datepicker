@@ -301,7 +301,6 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
   }
 
   selectYear(e: MouseEvent, year: number) {
-    debugger;
     e.preventDefault();
 
     setTimeout(() => {
