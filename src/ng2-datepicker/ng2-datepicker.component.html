@@ -1,6 +1,6 @@
 <div class="datepicker-container u-is-unselectable">
   <div class="datepicker-input-container">
-    <input type="text" class="datepicker-input" [(ngModel)]="date.formatted" readonly (click)="toggle()">
+    <input type="text" class="datepicker-input" [(ngModel)]="date.formatted" [readonly]="options.readonly" (click)="toggle()">
     <div class="datepicker-input-icon" (click)="toggle()">
       <i>
         <svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1">
@@ -102,15 +102,8 @@
           <button type="button" class="a-button u-is-primary u-is-small" (click)="today()">Today</button>
         </div>
       </div>
-      <div *ngIf="yearPicker && !isMobile()">
+      <div *ngIf="yearPicker">
         <div class="datepicker-calendar-years-container" slimScroll [options]="scrollOptions">
-          <span class="year" *ngFor="let y of years; let i = index" (click)="selectYear($event, y)">
-            {{ y }}
-          </span>
-        </div>
-      </div>
-      <div *ngIf="yearPicker && isMobile()">
-        <div class="datepicker-calendar-years-container" style="overflow-y: auto">
           <span class="year" *ngFor="let y of years; let i = index" (click)="selectYear($event, y)">
             {{ y }}
           </span>
