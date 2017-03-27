@@ -2,7 +2,6 @@ import { ElementRef, OnInit, EventEmitter } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { SlimScrollOptions } from 'ng2-slimscroll';
 import * as moment from 'moment';
-import { Device } from "ng2-device-detector";
 export interface IDateModel {
     day: string;
     month: string;
@@ -53,7 +52,6 @@ export interface CalendarDate {
 export declare const CALENDAR_VALUE_ACCESSOR: any;
 export declare class DatePickerComponent implements ControlValueAccessor, OnInit {
     el: ElementRef;
-    private device;
     options: DatePickerOptions;
     inputEvents: EventEmitter<{
         type: string;
@@ -72,10 +70,9 @@ export declare class DatePickerComponent implements ControlValueAccessor, OnInit
     scrollOptions: SlimScrollOptions;
     minDate: moment.Moment | any;
     maxDate: moment.Moment | any;
-    myDevice: Device;
     private onTouchedCallback;
     private onChangeCallback;
-    constructor(el: ElementRef, device: Device);
+    constructor(el: ElementRef);
     value: DateModel;
     ngOnInit(): void;
     generateCalendar(): void;

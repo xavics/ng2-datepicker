@@ -11,7 +11,6 @@ import {
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { SlimScrollOptions } from 'ng2-slimscroll';
 import * as moment from 'moment';
-import {Device} from "ng2-device-detector";
 
 const Moment: any = (<any>moment).default || moment;
 
@@ -115,12 +114,10 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
   minDate: moment.Moment | any;
   maxDate: moment.Moment | any;
 
-  myDevice: Device;
-
   private onTouchedCallback: () => void = () => { };
   private onChangeCallback: (_: any) => void = () => { };
 
-  constructor( @Inject(ElementRef) public el: ElementRef, private device: Device) {
+  constructor( @Inject(ElementRef) public el: ElementRef) {
     this.opened = false;
     this.currentDate = Moment();
     this.options = this.options || {};
@@ -151,8 +148,6 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
         }
       }
     });
-
-    this.myDevice = device;
   }
 
   get value(): DateModel {

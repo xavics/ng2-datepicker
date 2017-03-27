@@ -44,13 +44,12 @@
     "@angular/router": "^3.4.0",
     "core-js": "^2.4.1",
     "moment": "^2.17.1",
-    "ng2-device-detector": "^0.1.0",
     "ng2-slimscroll": "^1.2.6",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0-rc.4",
+    "@angular/cli": "1.0.0-rc.0",
     "@angular/compiler-cli": "^2.4.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
