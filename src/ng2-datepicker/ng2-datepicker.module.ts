@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { SlimScrollModule } from 'ng2-slimscroll';
 
 import { DatePickerComponent } from './ng2-datepicker.component';
+import {Ng2DeviceDetector} from "ng2-device-detector";
 export { DatePickerOptions, DateModel } from './ng2-datepicker.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ export { DatePickerOptions, DateModel } from './ng2-datepicker.component';
     CommonModule,
     FormsModule,
     SlimScrollModule,
+    Ng2DeviceDetector
   ],
   exports: [
     DatePickerComponent,
